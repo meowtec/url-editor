@@ -3,7 +3,11 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 import { defineConfig } from 'vite';
 
 export default defineConfig(({ command }) => ({
-    // base: '',
+  root: 'src',
+  build: {
+    outDir: '..',
+  },
+  base: 'https://meowtec.github.io/url-editor/',
   plugins: [
     reactRefresh(),
   ],
