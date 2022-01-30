@@ -2,6 +2,7 @@ import { ChangeEvent, useCallback, useState } from 'react';
 import CodeEditor from './code';
 import './app.css';
 import { parse, stringify } from './parse';
+import Links from './links';
 
 export default function App() {
   const [url, setUrl] = useState('');
@@ -31,6 +32,7 @@ export default function App() {
         onChange={handleUrlChange}
       />
       <CodeEditor className="editor" value={code} onChange={handleCodeChange} />
+      <Links />
     </div>
   );
 }
