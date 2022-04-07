@@ -7,7 +7,7 @@ export function parse(urlString: string): UrlObject {
   const url = new URL(urlString);
   const urlObject: UrlObject = {
     base:
-      url.protocol + (url.hostname ? '//' + url.hostname : '') + url.pathname,
+      url.protocol + (url.host ? '//' + url.host : '') + url.pathname,
     params: [],
   };
 
