@@ -31,7 +31,13 @@ const urlToJSONString = (url: string) => JSON.stringify(parse(url), null, '  ');
 
 export default function App() {
   const [url, setUrl] = useState(() => getUrlFromSearch());
-  const [code, setCode] = useState(() => urlToJSONString(url));
+  const [code, setCode] = useState(() => {
+    try {
+      return urlToJSONString(url);
+    } catch {
+      return '';
+    }
+  });
 
   const updateCodeFromUrl = (urlStr: string) => {
     try {
