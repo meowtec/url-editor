@@ -1,5 +1,5 @@
 // @ts-check
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig(({ command }) => ({
@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
   },
   base: 'https://meowtec.github.io/url-editor/',
   plugins: [
-    reactRefresh(),
+    react(),
   ],
     // workaround for esbuild does not support jsx automatic runtime
   esbuild: {

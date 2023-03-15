@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { EditorState, EditorView, basicSetup } from '@codemirror/basic-setup';
+import { basicSetup } from 'codemirror';
+import { EditorState } from '@codemirror/state';
+import { EditorView } from '@codemirror/view';
 import { javascript } from '@codemirror/lang-javascript';
 
 type DocText = EditorState['doc'];
