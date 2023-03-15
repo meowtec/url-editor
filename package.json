@@ -5,15 +5,28 @@
   "main": "index.js",
   "scripts": {
     "start": "vite",
-    "build": "rm -rf assets && vite build"
+    "build": "rm -rf assets && vite build",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/debounce": "^1.2.1",
+    "@types/pako": "^2.0.0",
     "@types/react": "^17.0.53",
     "@types/react-dom": "^17.0.18",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.59.3",
     "typescript": "^4.9.5",
     "vite": "^4.1.1"
   },
@@ -22,9 +35,12 @@
     "@codemirror/lang-json": "^6.0.1",
     "@codemirror/state": "^6.2.0",
     "@codemirror/view": "^6.8.0",
+    "clsx": "^1.2.1",
     "codemirror": "^6.0.1",
     "debounce": "^1.2.1",
+    "js-base64": "^3.7.5",
     "json5": "^2.2.3",
+    "pako": "^2.1.0",
     "preact": "^10.12.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

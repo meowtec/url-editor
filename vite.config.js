@@ -8,20 +8,22 @@ export default defineConfig(({ command }) => ({
     outDir: '..',
   },
   base: 'https://meowtec.github.io/url-editor/',
-  plugins: [
-    react(),
-  ],
-    // workaround for esbuild does not support jsx automatic runtime
+  plugins: [react()],
+  // workaround for esbuild does not support jsx automatic runtime
   esbuild: {
     jsxFactory: 'createElement',
-    jsxInject: `import { createElement } from '${command === 'build' ? 'preact' : 'react'}'`,
+    jsxInject: `import { createElement } from '${
+      command === 'build' ? 'preact' : 'react'
+    }'`,
   },
   resolve: {
     alias: {
-      ...command === 'build' ? {
-        react: 'preact/compat',
-        'react-dom': 'preact/compat',
-      } : {}
+      ...(command === 'build'
+        ? {
+            react: 'preact/compat',
+            'react-dom': 'preact/compat',
+          }
+        : {}),
     },
   },
 }));

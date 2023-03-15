@@ -4,6 +4,7 @@ export default function Links() {
       <a
         href="https://github.com/meowtec/url-editor"
         target="_blank"
+        rel="noreferrer"
       >
         <svg
           height="24"
