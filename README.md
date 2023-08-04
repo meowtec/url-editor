@@ -2,6 +2,8 @@
 
 An editor for safely editing URLs or JSONs that contain JSON data.
 
+![](./screenshot.png)
+
 ## Examples
 
 You have A URL, like this:
@@ -10,7 +12,7 @@ You have A URL, like this:
 https://example.com/?tabtype=weibo&keyword=100%25
 ```
 
-What you edit:
+You can edit it using JSON5:
 
 ```js
 {
@@ -37,7 +39,7 @@ Or a JSON like this:
 }
 ```
 
-What you edit:
+Edit like this:
 
 ```js
 {

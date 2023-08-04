@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+$code-font: Menlo, Monaco, Consolas, monospace;
+
 .app {
   position: absolute;
   top: 0;
@@ -26,6 +28,8 @@
   display: block;
   width: 100%;
   transition: background ease 0.4s;
+  word-break: break-all;
+  font-family: $code-font;
 
   &:focus {
     outline: none;
@@ -77,6 +81,10 @@
 
 .cm-editor {
   height: 100%;
+
+  .cm-scroller {
+    font-family: $code-font;
+  }
 }
 
 .links {
